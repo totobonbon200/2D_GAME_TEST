@@ -40,7 +40,9 @@ class Zombie:
 class Balls:
     def __init__(self):
         self.x, self.y = random.randint(100, 700), 90
-        self.image = load_image('ball21x21.png')
+        self.image = load_image('ball41x41.png')
+        self.speed = random.randint(5, 15)
+        self.size = random.randint(21, 41)
     pass
 
 def reset_world():
