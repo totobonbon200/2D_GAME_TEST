@@ -37,7 +37,8 @@ class Zombie:
     def draw(self):
         self.image.clip_draw(self.frame*430, 0, 430, 519, self.x, self.y , 70, 90)
     
-
+class Balls:
+    pass
 
 def reset_world():
     global running
