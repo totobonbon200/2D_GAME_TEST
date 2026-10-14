@@ -43,7 +43,13 @@ class Balls:
         self.image = load_image('ball41x41.png')
         self.speed = random.randint(5, 15)
         self.size = random.randint(21, 41)
-    pass
+        self.end = -1
+
+    def update(self):
+        pass
+
+    def draw(self):
+        pass
 
 def reset_world():
     global running
