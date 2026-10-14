@@ -48,6 +48,12 @@ class Balls:
     def update(self):
         if(self.end == -1): 
             self.y += self.speed
+        if(self.end == 1):
+            self.y = self.y - self.size
+            self.end = self.end - 1
+        elif(self.end == 0):
+            self.y = self.y + self.size
+            self.end = self.end + 1
         if(self.y >= 600 - self.size / 2):
             self.y = 600 - self.size / 2
             self.end = 1
