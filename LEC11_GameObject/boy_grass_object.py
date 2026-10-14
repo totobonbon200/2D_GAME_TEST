@@ -49,7 +49,7 @@ class Balls:
         pass
 
     def draw(self):
-        pass
+        self.image.clip_draw(0, 0, 41, 41, self.x + self.size / 2, self.y + self.size / 2, self.size, self.size)
 
 def reset_world():
     global running
