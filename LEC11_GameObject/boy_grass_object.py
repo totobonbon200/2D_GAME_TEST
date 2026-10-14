@@ -38,6 +38,9 @@ class Zombie:
         self.image.clip_draw(self.frame*430, 0, 430, 519, self.x, self.y , 70, 90)
     
 class Balls:
+    def __init__(self):
+        self.x, self.y = random.randint(100, 700), 90
+        self.image = load_image('ball21x21.png')
     pass
 
 def reset_world():
