@@ -46,7 +46,14 @@ class Balls:
         self.end = -1
 
     def update(self):
-        pass
+        if(self.end == -1): 
+            self.y += self.speed
+        # 출렁임 구현을 통한 반복실행 제한
+        if(self.y >= canvas_height): 
+            self.y = canvas_height - self.size
+            self.end = 1
+
+        
 
     def draw(self):
         self.image.clip_draw(0, 0, 40, 40, self.x, self.y, self.size, self.size)
