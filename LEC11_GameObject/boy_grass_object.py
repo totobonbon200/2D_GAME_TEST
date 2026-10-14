@@ -48,7 +48,14 @@ class Balls:
     def update(self):
         if(self.end == -1): 
             self.y += self.speed
-        # 출렁임 구현을 통한 반복실행 제한
+        # 출렁임
+        if(self.end >= 1): 
+            self.y -= self.speed
+            self.end -= 1
+        else: 
+            self.y += self.speed
+            self.end += 1
+        # 맨 위 충돌시
         if(self.y >= canvas_height): 
             self.y = canvas_height - self.size
             self.end = 1
