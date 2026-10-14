@@ -57,8 +57,8 @@ def reset_world():
     world += team
     zombie = Zombie()
     world.append(zombie)
-    balls = Balls()
-    world.append(balls)
+    balls = [Balls() for i in range(20)]
+    world += balls
 
 def update_world():
     for o in world:
